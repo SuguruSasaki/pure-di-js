@@ -8,5 +8,10 @@ declare class Factory<T> implements IFactory {
      * @param payload
      */
     create<T>(targetClass: new (dependency: IDependency, payload: IPayload) => T, payload: IPayload): T;
+    /**
+     * Create JSX object
+     * @param payload
+     */
+    createJsx<T extends Function>(component: T, payload: IPayload): T;
 }
 export default Factory;

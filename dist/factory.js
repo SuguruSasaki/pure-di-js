@@ -12,5 +12,13 @@ class Factory {
     create(targetClass, payload) {
         return new targetClass(this._dependency(), payload);
     }
+    /**
+     * Create JSX object
+     * @param payload
+     */
+    createJsx(component, payload) {
+        const props = { dependency: this._dependency(), payload };
+        return component({ ...props });
+    }
 }
 exports.default = Factory;

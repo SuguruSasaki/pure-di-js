@@ -1,4 +1,4 @@
-import { IDependency, IPayload, IModule } from "./types";
+import { IDependency, IPayload } from "./types";
 
 export interface IFactory {}
 
@@ -14,9 +14,11 @@ class Factory {
    * @param targetClass
    * @param payload
    */
-  create<T extends IModule>(targetClass: new () => T, payload: IPayload): T {
-    const instance = new targetClass();
-    return instance.inject(this._dependency, payload);
+  create<T>(
+    targetClass: new (dependency: IDependency, payload: IPayload) => T,
+    payload: IPayload
+  ): T {
+    return new targetClass(this._dependency, payload);
   }
 }
 

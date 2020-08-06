@@ -1,7 +1,3 @@
-export interface IDependency {}
+export type IDependency = {};
 
-export interface IPayload {}
-
-export interface IModule {
-  inject(dependency: IDependency, payload: IPayload);
-}
+export type IPayload = {};

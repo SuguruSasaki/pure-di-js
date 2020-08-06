@@ -10,7 +10,7 @@ class Factory {
      * @param payload
      */
     create(targetClass, payload) {
-        return new targetClass(this._dependency, payload);
+        return new targetClass(this._dependency(), payload);
     }
 }
 exports.default = Factory;

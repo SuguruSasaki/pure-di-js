@@ -1,7 +1,7 @@
 import { IDependency, IPayload, IFactory } from "./types";
 declare class Factory implements IFactory {
     private _dependency;
-    constructor(dependency: IDependency);
+    constructor(dependency: () => IDependency);
     /**
      * create object
      * @param targetClass

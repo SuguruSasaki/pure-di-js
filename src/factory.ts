@@ -1,6 +1,6 @@
 import { IDependency, IPayload, IFactory } from "./types";
 
-class Factory implements IFactory {
+class Factory<T> implements IFactory {
   private _dependency: () => IDependency;
 
   constructor(dependency: () => IDependency) {

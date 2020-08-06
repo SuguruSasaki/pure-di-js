@@ -1,2 +1,2 @@
 export { default as Factory } from "./factory";
-export { IDependency, IPayload } from "./types";
+export { IDependency, IPayload, IFactory } from "./types";

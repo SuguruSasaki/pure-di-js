@@ -1,6 +1,6 @@
 {
   "name": "pure-di",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "This library help your Dependency Injection pattern using Pure DI.",
   "main": "dist/index.js",
   "license": "MIT",

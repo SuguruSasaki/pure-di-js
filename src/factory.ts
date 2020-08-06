@@ -1,8 +1,6 @@
-import { IDependency, IPayload } from "./types";
+import { IDependency, IPayload, IFactory } from "./types";
 
-export interface IFactory {}
-
-class Factory {
+class Factory implements IFactory {
   private _dependency: IDependency;
 
   constructor(dependency: IDependency) {

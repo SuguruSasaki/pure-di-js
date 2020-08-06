@@ -2,18 +2,25 @@
   "name": "pure-di",
   "version": "1.0.0",
   "description": "This library help your Dependency Injection pattern using Pure DI.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/SuguruSasaki/pure-di-js.git"
   },
   "author": "suguru.sasaki",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/SuguruSasaki/pure-di-js/issues"
   },
-  "homepage": "https://github.com/SuguruSasaki/pure-di-js#readme"
+  "homepage": "https://github.com/SuguruSasaki/pure-di-js#readme",
+  "dependencies": {
+    "typescript": "^3.9.7"
+  }
 }

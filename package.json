@@ -1,6 +1,6 @@
 {
   "name": "pure-di",
-  "version": "1.0.7",
+  "version": "1.1.2",
   "description": "This library help your Dependency Injection pattern using Pure DI.",
   "main": "dist/index.js",
   "license": "MIT",
@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/SuguruSasaki/pure-di-js#readme",
   "dependencies": {
+    "@types/react": "^16.9.46",
+    "react": "^16.13.1",
     "typescript": "^3.9.7"
   }
 }

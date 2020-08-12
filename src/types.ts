@@ -1,6 +1,8 @@
-export type IDependency = {};
+import React from "react";
 
-export type IPayload = {};
+export interface IDependency {}
+
+export interface IPayload {}
 
 export type IProps = {
   dependency: IDependency;
@@ -13,5 +15,5 @@ export interface IFactory {
     payload: IPayload
   ): T;
 
-  createJsx<T extends Function>(component: T, payload: IPayload): T;
+  createJsx(Component: React.FC<any>): JSX.Element;
 }

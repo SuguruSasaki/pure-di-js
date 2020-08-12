@@ -1,3 +1,4 @@
+import React from "react";
 import { IDependency, IPayload, IFactory } from "./types";
 declare class Factory<T> implements IFactory {
     private _dependency;
@@ -12,6 +13,6 @@ declare class Factory<T> implements IFactory {
      * Create JSX object
      * @param payload
      */
-    createJsx<T extends Function>(component: T, payload: IPayload): T;
+    createJsx(Component: React.FC<any>): JSX.Element;
 }
 export default Factory;

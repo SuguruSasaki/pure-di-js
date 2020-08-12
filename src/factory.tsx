@@ -1,4 +1,5 @@
-import { IDependency, IPayload, IFactory, IProps } from "./types";
+import React from "react";
+import { IDependency, IPayload, IFactory } from "./types";
 
 class Factory<T> implements IFactory {
   private _dependency: () => IDependency;
@@ -23,9 +24,8 @@ class Factory<T> implements IFactory {
    * Create JSX object
    * @param payload
    */
-  createJsx<T extends Function>(component: T, payload: IPayload): T {
-    const props: IProps = { dependency: this._dependency(), payload };
-    return component({ ...props });
+  createJsx(Component: React.FC<any>): JSX.Element {
+    return <Component {...this._dependency()} />;
   }
 }
 
